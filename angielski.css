@@ -1,0 +1,373 @@
+@charset "utf-8";
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Dodaj kod poniżej do dostosowania wyglądu menu rozsuwanego */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #345678;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 14px 16px;
+  font-size: 19px;
+  font-family: Arial, sans-serif;
+}
+
+.mobile-menu a:hover {
+  background-color: #456789;
+  color: #000;
+}
+
+.logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      background-color: #4285f4;
+      border-radius: 5px;
+      margin-right: 20px; 
+    }
+.topnav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.topnav .logo {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+
+  border-radius: 5px;
+  margin-right: 20px;
+  text-decoration: none;
+	 pointer-events: none;
+	 
+}
+
+
+
+
+.topnav .wysrodkowane {
+  flex: 1; 
+  text-align: center; 
+}
+body {
+    background-image: url("zdjecia/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.wszystko {
+    min-height: 100vh;
+    position: relative;
+}
+
+.topnav {
+    background-color: #345678;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    transition: background-color 0.3s, color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 19px;
+    font-family: Arial, sans-serif;
+}
+
+.topnav a:hover {
+    background-color: #456789;
+    color: #000;
+}
+
+.container {
+   background-color: rgba(0, 130, 237, 0.8);
+    text-align: center;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.tytul {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.opis {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.opis h2 {
+    margin-top: 20px;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container li {
+    margin-bottom: 10px;
+}
+
+.zdjecie {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.audio {
+    margin-top: 20px;
+}
+
+.stopka {
+    background-color:#005FD1; 
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.stopka a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.stopka a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+	 .topnav .wysrodkowane {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .topnav.expanded .wysrodkowane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #345678;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .topnav.expanded .wysrodkowane a {
+    text-align: center;
+  }
+
+  .topnav.expanded .mobile-menu {
+    display: block;
+  }
+
+  .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+    .topnav .logo:hover {
+  text-decoration: none;
+	 background-color: #00EBFF;
+}
+  
+	.topnav .logo {
+		margin-right: auto;
+	background-color: #00EBFF;}
+	.topnav {
+		 padding: 8px 8px;
+       
+    }
+	.topnav a {
+        font-size: 3vw;
+    }
+ 	.opis h2 {
+		font-size: 3.5vw;
+    margin-top: 20px;
+}
+
+    .container {
+        max-width: 90%;
+        margin: 40px auto;
+        padding: 10px;
+    }
+
+    .tytul {
+        font-size: 5vw;
+    }
+
+    .opis {
+        font-size: 3vw;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1199px) {
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 30%;
+        background-color: #345678;
+        z-index: 1000;
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topnav .logo {
+        order: 2; /* Zmiana kolejności, aby logo było po prawej stronie */
+        margin-left: 20px; /* Mniejszy odstęp od lewej krawędzi */
+        background-color: #00FF4C;
+        text-decoration: none;
+        font-size: 24px;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .topnav .wysrodkowane {
+        display: none;
+    }
+
+    .topnav.expanded .wysrodkowane {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #345678;
+        position: absolute;
+        width: 70%;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .topnav.expanded .wysrodkowane a {
+        text-align: center;
+        width: 48%;
+        margin: 1%;
+        box-sizing: border-box;
+    }
+
+    .topnav.expanded .mobile-menu {
+        display: block;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+@media (min-width: 1200px) {
+    .topnav .logo:hover { text-decoration: none;
+	 background-color:#FFFD00;
+}
+ 
+.topnav .logo {
+		margin-right: auto;
+	background-color: #FFFD00;}
+	.topnav a {
+        font-size: 1.2vw;
+    }
+
+    .container {
+        max-width: 50%;
+        margin: 40px auto;
+        padding: 10px;
+    }
+
+    .tytul {
+        font-size: 2vw;
+    }
+
+    .opis {
+        font-size: 1.1vw;
+    }
+	.opis h2 {
+
+		font-size: 1.5vw;
+    margin-top: 20px;
+}
+}
+

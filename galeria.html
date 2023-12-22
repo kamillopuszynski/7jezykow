@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Galeria</title>
+    <link href="galeria.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="wszystko">
+
+        <div class="topnav">
+            <a href="" class="logo">Kamil</a>
+            <div class="wysrodkowane">
+                <a href="index.html" class="topnavy">Strona główna</a>
+                <a href="angielski.html">Angielski</a>
+                <a href="Mandarynski.html">Mandaryński</a>
+                <a href="hindi.html">Hindi</a>
+                <a href="hiszpanski.html">Hiszpański</a>
+                <a href="francuski.html">Francuski</a>
+                <a href="arabski.html">Arabski</a>
+                <a href="bengalski.html">Bengalski</a>
+                <a href="ankieta.html">Ankieta</a>
+                <a href="galeria.html">Galeria</a>
+            </div>
+			<div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+		
+</div>
+	<div class="mobile-menu">
+      <a href="index.html" class="topnavy">Strona główna</a>
+      <a href="angielski.html">Angielski</a>
+      <a href="Mandarynski.html">Mandaryński</a>
+      <a href="hindi.html">Hindi</a>
+      <a href="hiszpanski.html">Hiszpański</a>
+      <a href="francuski.html">Francuski</a>
+      <a href="arabski.html">Arabski</a>
+      <a href="bengalski.html">Bengalski</a>
+      <a href="ankieta.html">Ankieta</a>
+      <a href="galeria.html">Galeria</a>
+    </div>
+        </div><br><br><br><br><br><br><br>
+
+        <div class="gallery" id="gallery">
+            <img src="zdjecia/londyn.jpg" alt="Londyn">
+            <img src="zdjecia/szanghaj.webp" alt="Szanghaj">
+            <img src="zdjecia/newdelhi.jpg" alt="Nowe Delhi">
+            <img src="zdjecia/hiszpania.webp" alt="Hiszpania">
+            <img src="zdjecia/paryz.jpg" alt="Paryż">
+            <img src="zdjecia/dubaj.webp" alt="Dubaj">
+            <img src="zdjecia/bengal.jpg" alt="Bengali">
+        </div>
+
+        <div id="lightbox">
+            <span class="prev" onclick="plusSlides(-1); event.stopPropagation();">&#10094;</span>
+            <img id="lightbox-img">
+            <span class="next" onclick="plusSlides(1); event.stopPropagation();">&#10095;</span>
+        </div>
+
+        <script>
+            const gallery = document.getElementById('gallery');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const images = document.querySelectorAll('.gallery img');
+            let currentIndex = 0;
+
+            gallery.addEventListener('click', (event) => {
+                if (event.target.tagName === 'IMG') {
+                    const imgSrc = event.target.src;
+                    currentIndex = Array.from(images).indexOf(event.target);
+                    showImage(imgSrc);
+                }
+            });
+
+            lightbox.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+
+            function showImage(imgSrc) {
+                lightboxImg.src = imgSrc;
+                lightbox.style.display = 'flex';
+            }
+
+            function plusSlides(n) {
+                currentIndex = (currentIndex + n + images.length) % images.length;
+                const imgSrc = images[currentIndex].src;
+                showImage(imgSrc);
+            }function toggleMobileMenu() {
+  var topnav = document.querySelector('.topnav');
+  topnav.classList.toggle('expanded');
+}
+        </script>
+
+    </div>
+</body>
+</html>
