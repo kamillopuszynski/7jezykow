@@ -12,7 +12,7 @@
   transition: 0.4s;
 }
 
-/* Dodaj kod poniżej do dostosowania wyglądu menu rozsuwanego */
+
 .mobile-menu {
   display: none;
   position: fixed;
@@ -77,14 +77,15 @@
   text-align: center; 
 }
 body{
-	 background-image: url("zdjecia/languages-around-the-world.png");
-   background-size: cover;
+	 background: url("zdjecia/languages-around-the-world.png");
+ background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+   
     margin: 0;
+	padding: 0;
     font-family: Arial, sans-serif;
     color: #fff;
-    overflow-x: hidden;
+   
 
 
 }
