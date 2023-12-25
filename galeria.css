@@ -43,7 +43,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    margin: 0; 
+    padding: 0;
     font-family: Arial, sans-serif;
     color: #fff;
     overflow-x: hidden;
@@ -56,6 +57,7 @@ body {
 
   .mobile-menu-icon {
     display: block;
+	  margin-left: auto;
 	
 	 
   }
@@ -93,16 +95,19 @@ body {
     transform: rotate(45deg) translate(-5px, -6px);
   }
     .topnav .logo:hover {
+		margin-right: auto;
   text-decoration: none;
 	 background-color: #00EBFF;
 }
   
 	.topnav .logo {
 		margin-right: auto;
-	background-color: #00EBFF;}
+	background-color: #00EBFF;
+	justify-content: space-around;
+	margin-left: 0;}
 	.topnav {
 		 justify-content: space-between; 
-    align-items: center; 
+  
     padding: 8px 16px; 
 		 padding: 8px 8px;
        
@@ -136,7 +141,7 @@ body {
         display: none;
         position: fixed;
         top: 60px;
-        left: auto;
+        left: 0;
         width: 30%;
         background-color: #345678;
         z-index: 1000;
@@ -145,12 +150,15 @@ body {
     .topnav {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+		 align-items: center;
+		margin: 0;
+		padding: 0;
+        
     }
 
     .topnav .logo {
         order: 2; 
-        margin-left: 20px; 
+
         background-color: #00FF4C;
         text-decoration: none;
         font-size: 24px;
@@ -159,11 +167,17 @@ body {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         padding: 5px 10px;
         border-radius: 5px;
+		 
+    margin-left: auto;
     }
 
     .mobile-menu-icon {
+		 margin-right: auto;
         display: block;
         cursor: pointer;
+		order: 1; 
+		
+		
     }
 
     .topnav .wysrodkowane {
@@ -304,6 +318,7 @@ pointer-events: none;
     position: fixed;
     top: 0;
     width: 100%;
+	margin: 0;
     padding: 10px 0;
     z-index: 1000;
 }
@@ -321,12 +336,7 @@ pointer-events: none;
     background-color: #456789;
     color: #000;
 }
-  body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f1f1;
-        }
+
 
         .gallery {
     background: rgba(147, 147, 147, 0.8); 
